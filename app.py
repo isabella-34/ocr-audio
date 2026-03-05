@@ -90,8 +90,8 @@ if img_file_buffer is not None:
     st.write(text) 
 
 with st.sidebar:
-    st.subheader("¿Quieres convertirlo a audio o a otro idioma?")
-      
+      st.subheader("¿Quieres convertirlo a audio o a otro idioma?")
+    
       try:
           os.mkdir("temp")
       except:
