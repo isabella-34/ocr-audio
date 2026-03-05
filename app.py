@@ -44,7 +44,7 @@ remove_files(7)
 
 
 st.title("Reconocimiento Óptico de Caracteres")
-st.subheader("Elige la fuente de la imágen, esta puede venir de la cámara o cargando un archivo")
+st.subheader("Elige la fuente de la imágen, esta puede venir de la cámara o cargando un archivo.")
 
 cam_ = st.checkbox("Usar Cámara")
 
@@ -90,7 +90,8 @@ if img_file_buffer is not None:
     st.write(text) 
 
 with st.sidebar:
-      st.subheader("Parámetros de traducción")
+    st.subheader("¿Lo pasamos a otro idioma o a audio?")
+      st.text("Parámetros de traducción")
       
       try:
           os.mkdir("temp")
@@ -102,7 +103,7 @@ with st.sidebar:
       #text = st.text_input("Enter text")
       in_lang = st.selectbox(
           "Seleccione el lenguaje de entrada",
-          ("Ingles", "Español", "Bengali", "koreano", "Mandarin", "Japones"),
+          ("Ingles", "Español", "Bengali", "koreano", "Mandarin", "Japones", "Francés"),
       )
       if in_lang == "Ingles":
           input_language = "en"
@@ -116,10 +117,12 @@ with st.sidebar:
           input_language = "zh-cn"
       elif in_lang == "Japones":
           input_language = "ja"
+        elif in_lang == "Francés":
+          input_language = "fr"
       
       out_lang = st.selectbox(
           "Select your output language",
-          ("Ingles", "Español", "Bengali", "koreano", "Mandarin", "Japones"),
+          ("Ingles", "Español", "Bengali", "koreano", "Mandarin", "Japones", "Francés"),
       )
       if out_lang == "Ingles":
           output_language = "en"
@@ -133,6 +136,8 @@ with st.sidebar:
           output_language = "zh-cn"
       elif out_lang == "Japones":
           output_language = "ja"
+      elif out_lang == "Francés":
+          output_language = "fr"
       
       english_accent = st.selectbox(
           "Seleccione el acento",
