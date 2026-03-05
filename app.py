@@ -116,7 +116,7 @@ with st.sidebar:
           input_language = "zh-cn"
       elif in_lang == "Japones":
           input_language = "ja"
-        elif in_lang == "Francés":
+      elif in_lang == "Francés":
           input_language = "fr"
       
       out_lang = st.selectbox(
