@@ -90,8 +90,8 @@ if img_file_buffer is not None:
     st.write(text) 
 
 with st.sidebar:
-    st.subheader("¿Lo pasamos a otro idioma o a audio?")
-      st.write("Parámetros de traducción")
+    st.header("¿Lo pasamos a otro idioma o a audio?")
+      st.subheader("Parámetros de traducción")
       
       try:
           os.mkdir("temp")
